@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Among Us Windows Edition</title>
+    <style>
+        /* Estilos generales para centrar los elementos */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        /* Título arriba en el medio */
+        h1 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        /* Contenedor para centrar el botón principal en el medio de la pantalla */
+        .centro {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilo de los botones */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        /* Fondo oscuro del cartel (oculto por defecto) */
+        .fondo-cartel {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Caja blanca del cartel */
+        .cartel {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 350px;
+        }
+
+        .cartel p {
+            line-height: 1.5;
+            color: #222;
+        }
+
+        /* Texto azul para acceder al link */
+        .enlace-azul {
+            display: block;
+            margin: 15px 0;
+            color: #0066cc;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        /* Contenedor de los botones SOS y No */
+        .botones-cartel {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .btn-sos {
+            background-color: #d9534f;
+        }
+
+        .btn-sos:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Título arriba en el medio -->
+    <h1>DESCARGA AMONG US PARA WINDOWS VERSION 2026.09.26 EDICION ITCH.IO x86 + HACKS</h1>
+
+    <!-- Botón en el medio de la pantalla -->
+    <div class="centro">
+        <button onclick="abrirCartel()">Empezar la descarga!</button>
+    </div>
+
+    <!-- Cartel emergente -->
+    <div id="miCartel" class="fondo-cartel">
+        <div class="cartel">
+            <p>Among Us Windows Edition 2026.09.26 Itch.io edition, estas a punto de descargar este archivo .ZIP para poder jugar el juego. ocupa 960 MB</p>
+            
+            <!-- Texto en azul para acceder al link -->
+            <a href="https://www.youtube.com/@Tomilsas999/" target="_blank" class="enlace-azul">¡Te agradesco mucho si te SUBSCRIBES a mí :) por haberte ayudado!</a>
+            
+            <!-- Dos botones: SOS y No -->
+            <div class="botones-cartel">
+                <button class="btn-sos" onclick="irALink()">Empezar</button>
+                <button onclick="cerrarCartel()">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Función para mostrar el cartel
+        function abrirCartel() {
+            document.getElementById("miCartel").style.display = "flex";
+        }
+
+        // Función para cerrar el cartel (botón "No")
+        function cerrarCartel() {
+            document.getElementById("miCartel").style.display = "none";
+        }
+
+        // Función para abrir el link especificado (botón "SOS")
+        function irALink() {
+            window.open("https://google.com", "_blank");
+        }
+    </script>
+
+</body>
+</html>
